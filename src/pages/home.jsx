@@ -143,7 +143,7 @@ export default function HomeScreen() {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>📧 <a href="mailto:support@notespace.com">notespace31@gmail.com</a></p>
-          <p>📞 <a href="tel:+918007002923">+91 12345 67890</a></p>
+          <p>📞 <a href="tel:+918007002923">+91 8007002923</a></p>
           <p>📍 Gadge Nagar, Amravati 444603, Maharashtra, India</p>
         </div>
 
