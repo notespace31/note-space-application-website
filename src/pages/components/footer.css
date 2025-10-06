@@ -1,0 +1,102 @@
+.ns-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+/* Gradient Hero Section */
+.ns-hero {
+    display: flex;
+  background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ns-hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ns-hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.ns-hero-button {
+  background-color: #ffffff;
+  color: #6b21a8;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.ns-hero-button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer */
+.ns-footer {
+  background-color: #0f172a;
+  color: #d1d5db;
+  padding: 60px 20px 30px;
+}
+
+.ns-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.ns-footer-logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ns-footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.ns-footer-heading {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ns-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ns-footer-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.ns-footer-list li:hover {
+  text-decoration: underline;
+}
+
+.ns-footer-bottom {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin-top: 50px;
+  border-top: 1px solid #1f2937;
+  padding-top: 20px;
+}

@@ -1,0 +1,90 @@
+/* Transform Section */
+.transform-container {
+  padding: 80px 60px;
+  background: linear-gradient(180deg, #f8f9ff, #eef4ff);
+  text-align: center;
+}
+
+.transform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+  align-items: flex-start;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 15px;
+  text-align: left;
+}
+
+.benefit-icon {
+  color: #22c55e;
+  font-size: 22px;
+  margin-top: 3px;
+}
+
+.benefit-item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.benefit-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Progress Bars */
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.progress-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.progress-value {
+  font-weight: 600;
+}
+
+.progress-track {
+  background: #eee;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .transform-grid {
+    grid-template-columns: 1fr;
+  }
+}

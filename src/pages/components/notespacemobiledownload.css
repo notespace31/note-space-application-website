@@ -1,0 +1,77 @@
+.nsdl-section {
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  background-color: #fff;
+}
+
+.nsdl-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nsdl-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.nsdl-card {
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nsdl-icon {
+  font-size: 2.5rem;
+  color: #8b5cf6;
+  margin-bottom: 15px;
+}
+
+.nsdl-card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.nsdl-card-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.nsdl-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nsdl-ios {
+  background-color: #000;
+  color: #fff;
+}
+
+.nsdl-ios:hover {
+  background-color: #333;
+}
+
+.nsdl-android {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.nsdl-android:hover {
+  background-color: #16a34a;
+}
