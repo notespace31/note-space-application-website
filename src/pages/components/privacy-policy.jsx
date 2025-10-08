@@ -165,7 +165,7 @@ export default function PrivacyPolicyPopup({ open, onClose }) {
               rel="noopener noreferrer"
               style={{ color: "#2563eb", textDecoration: "underline" }}
             >
-              https://note-space-psi.vercel.app/privacy-policy
+              https://note-space-psi.vercel.app
             </a>
             . Your continued use of Notespace constitutes acceptance of any
             updates.

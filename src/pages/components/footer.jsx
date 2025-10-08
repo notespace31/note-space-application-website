@@ -50,7 +50,7 @@ export default function Footer() {
             <h3 className="ns-footer-heading">Support</h3>
             <ul className="ns-footer-list">
               <li>Help Center</li>
-              <li>Contact Us</li>
+              <li onClick={() => (window.location.href = "mailto:notespace31@gmail.com")}>Contact Us</li>
               <li>FAQs</li>
             </ul>
           </div>
