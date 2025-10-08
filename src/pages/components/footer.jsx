@@ -1,7 +1,16 @@
 import React from "react";
 import "./footer.css";
+import { useState } from "react";
+import PrivacyPolicyPopup from "./privacy-policy";
 
 export default function Footer() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
+  // ✅ Handler functions
+  const handleOpenPrivacy = () => setShowPrivacy(true);
+  const handleClosePrivacy = () => setShowPrivacy(false);
+  const handleTogglePrivacy = () => setShowPrivacy((prev) => !prev);
+
   return (
     <div className="ns-wrapper">
       {/* Gradient Section */}
@@ -14,6 +23,8 @@ export default function Footer() {
           Get Started Free - No Credit Card Required
         </button>
       </section>
+
+      <PrivacyPolicyPopup open={showPrivacy} onClose={handleClosePrivacy} />
 
       {/* Footer */}
       <footer className="ns-footer">
@@ -29,9 +40,9 @@ export default function Footer() {
           <div className="ns-footer-col">
             <h3 className="ns-footer-heading">Product</h3>
             <ul className="ns-footer-list">
-              <li>Features</li>
-              <li>Benefits</li>
-              <li>Download</li>
+              <li onClick={() => (window.location.href = "#features")}>Features</li>
+              <li onClick={() => (window.location.href = "#benefits")}>Benefits</li>
+              <li onClick={() => (window.location.href = "#download")}>Download</li>
             </ul>
           </div>
 
@@ -47,7 +58,7 @@ export default function Footer() {
           <div className="ns-footer-col">
             <h3 className="ns-footer-heading">Legal</h3>
             <ul className="ns-footer-list">
-              <li>Privacy Policy</li>
+              <li onClick={handleOpenPrivacy}>Privacy Policy</li>
               <li>Terms of Service</li>
               <li>Refund Policy</li>
             </ul>

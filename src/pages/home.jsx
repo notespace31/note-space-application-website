@@ -33,12 +33,6 @@ export default function HomeScreen() {
             <a href="#benefits" onClick={() => setMenuOpen(false)}>Benefits</a>
             <a href="#download" onClick={() => setMenuOpen(false)}>Download</a>
           </div>
-          <button
-            className="get-started-btn"
-            onClick={() => setMenuOpen(false)}
-          >
-            Get Started
-          </button>
         </div>
       </nav>
 

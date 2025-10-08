@@ -21,8 +21,8 @@ export default function HeroSection() {
             grades with India’s #1 study platform for college students.
           </p>
           <div className="hero-buttons">
-            <button className="btn-primary">Get Started Free</button>
-            <button className="btn-outline">Download App</button>
+            <button className="btn-primary" onClick={() => (window.location.href = "#features")}>Get Started Free</button>
+            <button className="btn-outline" onClick={() => (window.location.href = "#download")}>Download App</button>
           </div>
         </div>
       </section>

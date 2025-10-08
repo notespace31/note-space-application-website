@@ -3,7 +3,7 @@ import "./notespacemobiledownload.css";
 
 export default function NoteSpaceMobileDownload() {
   return (
-    <section className="nsdl-section">
+    <section className="nsdl-section" id="download">
       <h1 className="nsdl-title">Download NoteSpace</h1>
       <p className="nsdl-subtitle">Available on Android devices</p>
 

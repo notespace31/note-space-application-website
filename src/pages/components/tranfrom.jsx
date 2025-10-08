@@ -43,7 +43,7 @@ export default function TransformSection() {
   ];
 
   return (
-    <div className="transform-container">
+    <div className="transform-container" id="features">
       <h2 className="section-title">Transform Your Study Experience</h2>
       <p className="section-subtitle">
         Join thousands of students who improved their grades with NoteSpace

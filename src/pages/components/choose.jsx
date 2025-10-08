@@ -50,7 +50,7 @@ export default function WhyChooseSection() {
   ];
 
   return (
-    <div className="why-choose-container">
+    <div className="why-choose-container" id="benefits">
       <h2 className="section-title">Why Choose NoteSpace?</h2>
       <p className="section-subtitle">
         Everything you need to excel in your studies
