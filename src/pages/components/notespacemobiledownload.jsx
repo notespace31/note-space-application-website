@@ -1,6 +1,5 @@
 import React from "react";
 import "./notespacemobiledownload.css";
-
 export default function NoteSpaceMobileDownload() {
   return (
     <section className="nsdl-section" id="download">
@@ -14,7 +13,17 @@ export default function NoteSpaceMobileDownload() {
           Study on the go with our mobile app. Available for Android.
         </p>
 
-        <button className="nsdl-btn nsdl-android">⬇ Download for Android</button>
+        <button
+          className="nsdl-btn nsdl-android"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/downloads/NoteSpace.apk";
+            link.download = "NoteSpace.apk";
+            link.click();
+          }}
+        >
+          ⬇ Download for Android
+        </button>
       </div>
     </section>
   );

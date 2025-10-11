@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
-import { useState } from "react";
 import PrivacyPolicyPopup from "./privacy-policy";
+import TermsAndServicesPopup from "./terms-and-services-popup";
+import RefundPolicyPopup from "./refund-policy-page";
 
 export default function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false);
-
-  // ✅ Handler functions
-  const handleOpenPrivacy = () => setShowPrivacy(true);
-  const handleClosePrivacy = () => setShowPrivacy(false);
-  const handleTogglePrivacy = () => setShowPrivacy((prev) => !prev);
+  const [showTerms, setShowTerms] = useState(false);
+  const [showRefund, setShowRefund] = useState(false);
 
   return (
     <div className="ns-wrapper">
@@ -20,11 +18,14 @@ export default function Footer() {
           Join 10,000+ students who are already studying smarter with NoteSpace
         </p>
         <button className="ns-hero-button">
-          Get Started Free - No Credit Card Required
+          Get Started Free
         </button>
       </section>
 
-      <PrivacyPolicyPopup open={showPrivacy} onClose={handleClosePrivacy} />
+      {/* ✅ Popups */}
+      <PrivacyPolicyPopup open={showPrivacy} onClose={() => setShowPrivacy(false)} />
+      <TermsAndServicesPopup open={showTerms} onClose={() => setShowTerms(false)} />
+      <RefundPolicyPopup open={showRefund} onClose={() => setShowRefund(false)} />
 
       {/* Footer */}
       <footer className="ns-footer">
@@ -32,8 +33,7 @@ export default function Footer() {
           <div className="ns-footer-col">
             <h2 className="ns-footer-logo">NoteSpace</h2>
             <p className="ns-footer-text">
-              Empowering students to achieve academic excellence through smart
-              learning.
+              Empowering students to achieve academic excellence through smart learning.
             </p>
           </div>
 
@@ -49,18 +49,18 @@ export default function Footer() {
           <div className="ns-footer-col">
             <h3 className="ns-footer-heading">Support</h3>
             <ul className="ns-footer-list">
-              <li>Help Center</li>
-              <li onClick={() => (window.location.href = "mailto:notespace31@gmail.com")}>Contact Us</li>
-              <li>FAQs</li>
+              <li>
+                <a href="mailto:notespace31@gmail.com">Contact Us</a>
+              </li>
             </ul>
           </div>
 
           <div className="ns-footer-col">
             <h3 className="ns-footer-heading">Legal</h3>
             <ul className="ns-footer-list">
-              <li onClick={handleOpenPrivacy}>Privacy Policy</li>
-              <li>Terms of Service</li>
-              <li>Refund Policy</li>
+              <li onClick={() => setShowPrivacy(true)}>Privacy Policy</li>
+              <li onClick={() => setShowTerms(true)}>Terms of Service</li>
+              <li onClick={() => setShowRefund(true)}>Refund Policy</li>
             </ul>
           </div>
         </div>

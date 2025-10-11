@@ -22,7 +22,7 @@ export default function HeroSection() {
           </p>
           <div className="hero-buttons">
             <button className="btn-primary" onClick={() => (window.location.href = "#features")}>Get Started Free</button>
-            <button className="btn-outline" onClick={() => (window.location.href = "#download")}>Download App</button>
+            <button className="btn-outline" onClick={() => (window.location.href = "/download-app")}>Download App</button>
           </div>
         </div>
       </section>
