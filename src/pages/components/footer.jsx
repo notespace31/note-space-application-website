@@ -17,7 +17,7 @@ export default function Footer() {
         <p className="ns-hero-subtitle">
           Join 10,000+ students who are already studying smarter with NoteSpace
         </p>
-        <button className="ns-hero-button">
+        <button className="ns-hero-button" onClick={() => (window.location.href = "#benefits")}>
           Get Started Free
         </button>
       </section>
