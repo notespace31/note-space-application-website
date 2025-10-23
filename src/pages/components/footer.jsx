@@ -13,19 +13,36 @@ export default function Footer() {
     <div className="ns-wrapper">
       {/* Gradient Section */}
       <section className="ns-hero">
-        <h1 className="ns-hero-title">Ready to Transform Your Studies?</h1>
-        <p className="ns-hero-subtitle">
-          Join 10,000+ students who are already studying smarter with NoteSpace
-        </p>
-        <button className="ns-hero-button" onClick={() => (window.location.href = "#benefits")}>
-          Get Started Free
-        </button>
+        <div className="ns-hero-content">
+          <h1 className="ns-hero-title">
+            Ready to <span>Transform</span> Your Studies?
+          </h1>
+          <p className="ns-hero-subtitle">
+            Join <strong>10,000+ students</strong> already studying smarter with{" "}
+            <span>NoteSpace</span>.
+          </p>
+          <button
+            className="ns-hero-button"
+            onClick={() => (window.location.href = "#benefits")}
+          >
+            🚀 Get Started Free
+          </button>
+        </div>
       </section>
 
       {/* ✅ Popups */}
-      <PrivacyPolicyPopup open={showPrivacy} onClose={() => setShowPrivacy(false)} />
-      <TermsAndServicesPopup open={showTerms} onClose={() => setShowTerms(false)} />
-      <RefundPolicyPopup open={showRefund} onClose={() => setShowRefund(false)} />
+      <PrivacyPolicyPopup
+        open={showPrivacy}
+        onClose={() => setShowPrivacy(false)}
+      />
+      <TermsAndServicesPopup
+        open={showTerms}
+        onClose={() => setShowTerms(false)}
+      />
+      <RefundPolicyPopup
+        open={showRefund}
+        onClose={() => setShowRefund(false)}
+      />
 
       {/* Footer */}
       <footer className="ns-footer">
@@ -33,16 +50,23 @@ export default function Footer() {
           <div className="ns-footer-col">
             <h2 className="ns-footer-logo">NoteSpace</h2>
             <p className="ns-footer-text">
-              Empowering students to achieve academic excellence through smart learning.
+              Empowering students to achieve academic excellence through smart
+              learning.
             </p>
           </div>
 
           <div className="ns-footer-col">
             <h3 className="ns-footer-heading">Product</h3>
             <ul className="ns-footer-list">
-              <li onClick={() => (window.location.href = "#features")}>Features</li>
-              <li onClick={() => (window.location.href = "#benefits")}>Benefits</li>
-              <li onClick={() => (window.location.href = "#download")}>Download</li>
+              <li onClick={() => (window.location.href = "#features")}>
+                Features
+              </li>
+              <li onClick={() => (window.location.href = "#benefits")}>
+                Benefits
+              </li>
+              <li onClick={() => (window.location.href = "#download")}>
+                Download
+              </li>
             </ul>
           </div>
 

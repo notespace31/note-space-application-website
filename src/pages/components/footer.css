@@ -4,44 +4,128 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Gradient Hero Section */
+/* 🌤 Refined Hero Section — smooth after the Download section */
 .ns-hero {
-    display: flex;
-  background: linear-gradient(to right, #8b5cf6, #3b82f6);
-  color: #fff;
+  position: relative;
+  background: linear-gradient(180deg, #ffffff, #f9f9ff);
+  color: #1e1b4b;
   text-align: center;
   padding: 100px 20px;
-  justify-content: center;
+  overflow: hidden;
+  display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.ns-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(99, 102, 241, 0.08),
+    transparent 60%
+  );
+  z-index: 1;
+}
+
+.ns-hero-content {
+  position: relative;
+  z-index: 2;
+  /* background: rgba(255, 255, 255, 0.7); */
+  backdrop-filter: blur(10px);
+  /* border: 1px solid rgba(255, 255, 255, 0.6); */
+  border-radius: 24px;
+  padding: 50px 30px;
+  max-width: 800px;
+  /* box-shadow: 0 8px 30px rgba(99, 102, 241, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ns-hero-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #1e1b4b;
+}
+
+.ns-hero-title span {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ns-hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #4b4b6b;
+  margin-bottom: 35px;
+}
+
+.ns-hero-subtitle span {
+  color: #6366f1;
+  font-weight: 600;
 }
 
 .ns-hero-button {
-  background-color: #ffffff;
-  color: #6b21a8;
-  border: none;
-  padding: 12px 30px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: white;
   font-weight: 600;
   font-size: 1rem;
-  border-radius: 8px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 14px;
   cursor: pointer;
-  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.25);
+  transition: all 0.3s ease;
 }
 
 .ns-hero-button:hover {
-  background-color: #f1f1f1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
 }
+
+/* ✨ Soft floating accent lights (subtle animation) */
+.ns-hero::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12), transparent 70%);
+  border-radius: 50%;
+  animation: float-light 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float-light {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .ns-hero {
+    padding: 70px 20px;
+  }
+
+  .ns-hero-title {
+    font-size: 2.1rem;
+  }
+
+  .ns-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .ns-hero-content {
+    padding: 40px 25px;
+  }
+}
+
 
 /* Footer */
 .ns-footer {

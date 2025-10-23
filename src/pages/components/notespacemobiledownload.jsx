@@ -1,28 +1,32 @@
 import React from "react";
 import "./notespacemobiledownload.css";
+import { Download, Smartphone } from "lucide-react";
+
 export default function NoteSpaceMobileDownload() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/downloads/NoteSpace.apk";
+    link.download = "NoteSpace.apk";
+    link.click();
+  };
+
   return (
     <section className="nsdl-section" id="download">
       <h1 className="nsdl-title">Download NoteSpace</h1>
-      <p className="nsdl-subtitle">Available on Android devices</p>
+      <p className="nsdl-subtitle">Study smarter, anywhere — Android only</p>
 
       <div className="nsdl-card">
-        <div className="nsdl-icon">📱</div>
+        <div className="nsdl-icon">
+          <Smartphone size={40} />
+        </div>
         <h2 className="nsdl-card-title">Mobile App</h2>
         <p className="nsdl-card-text">
-          Study on the go with our mobile app. Available for Android.
+          Access all your study materials and notes anytime with the official
+          NoteSpace app.
         </p>
 
-        <button
-          className="nsdl-btn nsdl-android"
-          onClick={() => {
-            const link = document.createElement("a");
-            link.href = "/downloads/NoteSpace.apk";
-            link.download = "NoteSpace.apk";
-            link.click();
-          }}
-        >
-          ⬇ Download for Android
+        <button className="nsdl-btn" onClick={handleDownload}>
+          <Download size={20} /> Download for Android
         </button>
       </div>
     </section>

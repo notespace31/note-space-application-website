@@ -1,5 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
 import "./tranfrom.css";
+
 export default function TransformSection() {
   const benefits = [
     {
@@ -43,14 +44,13 @@ export default function TransformSection() {
   ];
 
   return (
-    <div className="transform-container" id="features">
+    <section className="transform-container" id="features">
       <h2 className="section-title">Transform Your Study Experience</h2>
       <p className="section-subtitle">
         Join thousands of students who improved their grades with NoteSpace
       </p>
 
       <div className="transform-grid">
-        {/* Left Column - Benefits */}
         <div className="benefits-list">
           {benefits.map((item, index) => (
             <div className="benefit-item" key={index}>
@@ -63,7 +63,6 @@ export default function TransformSection() {
           ))}
         </div>
 
-        {/* Right Column - Progress Stats */}
         <div className="progress-bars">
           {stats.map((stat, index) => (
             <div className="progress-card" key={index}>
@@ -84,6 +83,6 @@ export default function TransformSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
